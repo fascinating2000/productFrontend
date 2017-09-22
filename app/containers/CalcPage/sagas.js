@@ -12,7 +12,7 @@ import request from 'utils/request';
 export function* fetchProduct(action) {
   const sku = action.sku;
 
-  const requestURL = `http://192.168.1.240:3001/${sku}`;
+  const requestURL = `http://localhost:3001/${sku}`;
 
   try {
     const params = {

@@ -32,7 +32,7 @@ export function* getRepos() {
 }
 
 export function* getProducts() {
-  const requestURL = 'http://192.168.1.240:3001/';
+  const requestURL = 'http://localhost:3001/';
 
   try {
     const res = yield call(request, requestURL, {
@@ -45,7 +45,7 @@ export function* getProducts() {
 }
 
 export function* removeProduct(action) {
-  const requestURL = `http://192.168.1.240:3001/${action.sku}`;
+  const requestURL = `http://localhost:3001/${action.sku}`;
 
   try {
     const res = yield call(request, requestURL, {
