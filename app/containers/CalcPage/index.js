@@ -142,6 +142,7 @@ export class CalcPage extends React.PureComponent { // eslint-disable-line react
           <div>
             <Input
               id="price"
+              disabled
               type="text"
               placeholder=""
               value={profitMargin}
