@@ -32,7 +32,7 @@ export function* getRepos() {
 }
 
 export function* getProducts() {
-  const requestURL = 'http://localhost:3001/';
+  const requestURL = 'http://ec2-18-221-88-51.us-east-2.compute.amazonaws.com:3001/';
 
   try {
     const res = yield call(request, requestURL, {
@@ -45,7 +45,7 @@ export function* getProducts() {
 }
 
 export function* removeProduct(action) {
-  const requestURL = `http://localhost:3001/${action.sku}`;
+  const requestURL = `http://ec2-18-221-88-51.us-east-2.compute.amazonaws.com:3001/${action.sku}`;
 
   try {
     const res = yield call(request, requestURL, {
