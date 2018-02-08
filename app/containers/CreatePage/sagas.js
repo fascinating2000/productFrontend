@@ -16,7 +16,7 @@ export function* addProduct() {
   const cost = yield select(makeSelectCost());
   const freight = yield select(makeSelectFreight());
 
-  const requestURL = `http://localhost:3001/?sku=${sku}&name=${name}&cost=${cost}&freight=${freight}`;
+  const requestURL = `http://ec2-35-171-170-70.compute-1.amazonaws.com:3001/?sku=${sku}&name=${name}&cost=${cost}&freight=${freight}`;
 
   try {
     const params = {

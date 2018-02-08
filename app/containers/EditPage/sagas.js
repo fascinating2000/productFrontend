@@ -13,7 +13,7 @@ import request from 'utils/request';
 export function* fetchProduct(action) {
   const sku = action.sku;
 
-  const requestURL = `http://localhost:3001/${sku}`;
+  const requestURL = `http://ec2-35-171-170-70.compute-1.amazonaws.com:3001/${sku}`;
 
   try {
     const params = {
@@ -34,7 +34,7 @@ export function* updateProduct(action) {
   const freight = yield select(makeSelectFreight());
   const id = action.id;
 
-  const requestURL = `http://localhost:3001/${id}?sku=${sku}&name=${name}&cost=${cost}&freight=${freight}`;
+  const requestURL = `http://ec2-35-171-170-70.compute-1.amazonaws.com:3001/${id}?sku=${sku}&name=${name}&cost=${cost}&freight=${freight}`;
 
   try {
     const params = {
