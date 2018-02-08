@@ -12,7 +12,7 @@ import request from 'utils/request';
 export function* fetchProduct(action) {
   const sku = action.sku;
 
-  const requestURL = `http://ec2-18-221-88-51.us-east-2.compute.amazonaws.com:3001/${sku}`;
+  const requestURL = `http://localhost:3001/${sku}`;
 
   try {
     const params = {
